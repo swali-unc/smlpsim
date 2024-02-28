@@ -1,9 +1,12 @@
 #pragma once
 
+struct request;
+
 struct task {
 	double cost;
 	double period;
 	double deadline;
+	request* r;
 };
 
 struct job {
@@ -12,6 +15,7 @@ struct job {
 	double deadline;
 	double totalcost;
 	int cpu;
+	request* r;
 };
 
 struct request {
@@ -20,6 +24,7 @@ struct request {
 	double reqsize;
 	job* j;
 	double issuetime;
+	double piblockingtime;
 };
 
 enum acttype {
