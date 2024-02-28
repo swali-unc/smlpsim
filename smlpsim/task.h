@@ -25,10 +25,11 @@ struct request {
 	job* j;
 	double issuetime;
 	double piblockingtime;
+	int k;
 };
 
 enum acttype {
-	RELEASE, UNLOCK, COMPLETE
+	RELEASE, UNLOCK, COMPLETE, SLICE
 };
 
 struct act {
